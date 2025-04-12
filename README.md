@@ -1,13 +1,17 @@
 # flyout
 
 
+Copy and rename `config.js.tmp` to `cmake/custom/` directory. 
+
+
 ```bash
 cmake/
     custom/
-        config.js   // Renamed from config.js.demo
+        ltd-config.js       # Renamed from config.js.tmp
     flyout/
-        current.js.in
-        flyout.js
+        ltd-config.js.tmp
+        ltd-current.js.in
+        ltd-flyout.js
         ltd-icon.svg
 ```
 
@@ -17,11 +21,11 @@ out/
     html/
         zh-tw/
             master/
-                current.js
+                ltd-current.js
             latest/
-                current.js
-        config.js
-        flyout.js
+                ltd-current.js
+        ltd-config.js
+        ltd-flyout.js
         ltd-icon.svg
 ```
 
