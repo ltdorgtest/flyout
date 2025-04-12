@@ -248,9 +248,9 @@ function addStyles() {
     .ltd-flyout-content {
       color: #ffffff;             /* Color: Text color */
       background-color: #263238;  /* Color: Background color */
-      padding: 10px;                /* Style: Inner spacing */
-      max-height: 450px;            /* Style: Max height before scrolling */
-      overflow-y: auto;             /* Style: Enable vertical scrollbar if needed */
+      padding: 10px;              /* Style: Inner spacing */
+      max-height: 450px;          /* Style: Max height before scrolling */
+      overflow-y: auto;           /* Style: Enable vertical scrollbar if needed */
     }
 
     .ltd-flyout-content.closed {
