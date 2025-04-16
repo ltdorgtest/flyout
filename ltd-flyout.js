@@ -192,7 +192,7 @@ function addStyles() {
       line-height: 20px;
       position: fixed;      /* Position: Stays in place on the screen */
       right: 15px;          /* Position: 15px from the right edge */
-      bottom: 20px;         /* Position: 20px from the bottom edge */
+      bottom: 30px;         /* Position: 30px from the bottom edge */
       z-index: 5000;        /* Position: Ensure flyout appears above other elements */
       padding: 5px;         /* Style: Inner padding */
       border-radius: 5px;   /* Style: Rounded corners */
