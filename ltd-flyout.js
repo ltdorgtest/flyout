@@ -257,14 +257,14 @@ function addStyles() {
       display: none;
     }
 
-    dl {
+    .ltd-flyout dl {
       display: flex;
       flex-wrap: wrap;
       margin: 0;
       padding: 0;
     }
 
-    dt {
+    .ltd-flyout dt {
       color: #808080;
       width: 100%;
       font-weight: bold;
@@ -272,24 +272,24 @@ function addStyles() {
       padding: 2px 0;
     }
 
-    dd {
+    .ltd-flyout dd {
       margin: 0;
       padding: 0;
     }
 
-    dd.newline {
+    .ltd-flyout dd.newline {
       flex-basis: 100%;
       height: 0;
     }
 
-    dd.options {
+    .ltd-flyout dd.options {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       justify-content: flex-start;
     }
 
-    dd.options a {
+    .ltd-flyout dd.options a {
       color: #ffffff;             /* Color: Text color */
       background-color: #263238;  /* Color: Background color */
       text-decoration: none;
@@ -298,12 +298,12 @@ function addStyles() {
       transition: background 0.3s;
     }
 
-    dd.options a:hover {
+    .ltd-flyout dd.options a:hover {
       color: #ffffff;             /* Color: Text color */
       background-color: #27ae60;  /* Color: Background color */
     }
 
-    dd.options a.selected {
+    .ltd-flyout dd.options a.selected {
       color: #ffffff;             /* Color: Text color */
       background-color: #27ae60;  /* Color: Background color */
       font-weight: bold;
