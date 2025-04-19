@@ -257,14 +257,14 @@ function addStyles() {
       display: none;
     }
 
-    .ltd-flyout dl {
+    .ltd-flyout-content dl {
       display: flex;
       flex-wrap: wrap;
       margin: 0;
       padding: 0;
     }
 
-    .ltd-flyout dt {
+    .ltd-flyout-content dt {
       color: #808080;
       width: 100%;
       font-weight: bold;
@@ -272,24 +272,24 @@ function addStyles() {
       padding: 2px 0;
     }
 
-    .ltd-flyout dd {
+    .ltd-flyout-content dd {
       margin: 0;
       padding: 0;
     }
 
-    .ltd-flyout dd.newline {
+    .ltd-flyout-content dd.newline {
       flex-basis: 100%;
       height: 0;
     }
 
-    .ltd-flyout dd.options {
+    .ltd-flyout-content dd.options {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       justify-content: flex-start;
     }
 
-    .ltd-flyout dd.options a {
+    .ltd-flyout-content dd.options a {
       color: #ffffff;             /* Color: Text color */
       background-color: #263238;  /* Color: Background color */
       text-decoration: none;
@@ -298,12 +298,12 @@ function addStyles() {
       transition: background 0.3s;
     }
 
-    .ltd-flyout dd.options a:hover {
+    .ltd-flyout-content dd.options a:hover {
       color: #ffffff;             /* Color: Text color */
       background-color: #27ae60;  /* Color: Background color */
     }
 
-    .ltd-flyout dd.options a.selected {
+    .ltd-flyout-content dd.options a.selected {
       color: #ffffff;             /* Color: Text color */
       background-color: #27ae60;  /* Color: Background color */
       font-weight: bold;
