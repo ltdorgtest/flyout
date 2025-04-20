@@ -188,7 +188,7 @@ function addStyles() {
       background-color: #263238;  /* Color: Background color */
       box-shadow: 0 4px 10px #000000;
       font-family: Arial, sans-serif;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 20px;
       position: fixed;      /* Position: Stays in place on the screen */
       right: 15px;          /* Position: 15px from the right edge */
@@ -218,8 +218,8 @@ function addStyles() {
     }
 
     .ltd-flyout-header-icon-img {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
       padding: 10px;
       display: block;
       box-sizing: content-box;
