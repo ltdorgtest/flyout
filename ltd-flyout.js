@@ -188,7 +188,7 @@ function addStyles() {
       background-color: #263238;  /* Color: Background color */
       box-shadow: 0 4px 10px #000000;
       font-family: Arial, sans-serif;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 20px;
       position: fixed;      /* Position: Stays in place on the screen */
       right: 15px;          /* Position: 15px from the right edge */
@@ -196,13 +196,14 @@ function addStyles() {
       z-index: 5000;        /* Position: Ensure flyout appears above other elements */
       padding: 5px;         /* Style: Inner padding */
       border-radius: 5px;   /* Style: Rounded corners */
-      max-width: 400px;     /* Style: Maximum width of 400px */
+      max-width: 350px;     /* Style: Maximum width of 350px */
     }
 
     .ltd-flyout-header {
       color: #27ae60;             /* Color: Text color */
       background-color: #263238;  /* Color: Background color */
       display: flex;
+      padding: 5px;
       align-items: center;
       font-weight: bold;
       cursor: pointer;
@@ -210,7 +211,7 @@ function addStyles() {
 
     .ltd-flyout-header.ltd-icon-only {
       justify-content: center;
-      padding: 0;
+      padding: 5px;
     }
 
     .ltd-flyout-header-icon {
@@ -220,13 +221,13 @@ function addStyles() {
     .ltd-flyout-header-icon-img {
       width: 25px;
       height: 25px;
-      padding: 10px;
+      padding: 5px;
       display: block;
       box-sizing: content-box;
     }
 
     .ltd-flyout-header-label {
-      padding: 10px;
+      padding: 5px;
       flex-grow: 1;
       text-align: right;
     }
@@ -238,7 +239,7 @@ function addStyles() {
     .ltd-flyout-divider {
       background-color: #808080;
       height: 1px;
-      margin: 5px 10px;
+      margin: 1px 5px;
     }
 
     .ltd-flyout-divider.ltd-flyout-closed {
