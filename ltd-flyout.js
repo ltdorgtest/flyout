@@ -188,7 +188,7 @@ function addStyles() {
       background-color: #263238;  /* Color: Background color */
       box-shadow: 0 4px 10px #000000;
       font-family: Arial, sans-serif;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 20px;
       position: fixed;      /* Position: Stays in place on the screen */
       right: 15px;          /* Position: 15px from the right edge */
@@ -196,7 +196,7 @@ function addStyles() {
       z-index: 5000;        /* Position: Ensure flyout appears above other elements */
       padding: 5px;         /* Style: Inner padding */
       border-radius: 5px;   /* Style: Rounded corners */
-      max-width: 350px;     /* Style: Maximum width of 350px */
+      max-width: 400px;     /* Style: Maximum width of 370px */
     }
 
     .ltd-flyout-header {
@@ -218,8 +218,8 @@ function addStyles() {
     }
 
     .ltd-flyout-header-icon-img {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       padding: 10px;
       display: block;
       box-sizing: content-box;
