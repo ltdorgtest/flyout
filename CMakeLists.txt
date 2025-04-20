@@ -15,6 +15,7 @@ set(LANGUAGE_LIST
 
 set(VERSION_LIST
     master
+    3.10 3.9 3.8 3.7 3.6 3.5 3.4 3.3 3.2 3.1 3.0
     2.2
     2.1
     2.0)
