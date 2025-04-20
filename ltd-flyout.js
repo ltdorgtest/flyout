@@ -92,7 +92,7 @@ function createFlyout() {
     <div class="ltd-flyout">
       <span class="ltd-flyout-header">
         <span class="ltd-flyout-header-icon">
-          <img src="${_FLYOUT_JS_DIR}/ltd-icon.svg" alt="icon">
+          <img class="ltd-flyout-header-icon-img" src="${_FLYOUT_JS_DIR}/ltd-icon.svg" alt="icon">
         </span>
         <span class="ltd-flyout-header-label">
           Language: ${_CURRENT_LANGUAGE} | Version: ${_CURRENT_VERSION}
@@ -217,7 +217,7 @@ function addStyles() {
       flex-shrink: 0;
     }
 
-    .ltd-flyout-header-icon img {
+    .ltd-flyout-header-icon-img {
       width: 25px;
       height: 25px;
       padding: 10px;
