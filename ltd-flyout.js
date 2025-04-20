@@ -98,8 +98,8 @@ function createFlyout() {
           Language: ${_CURRENT_LANGUAGE} | Version: ${_CURRENT_VERSION}
         </span>
       </span>
-      <div class="ltd-flyout-divider closed"></div>
-      <div class="ltd-flyout-content closed">
+      <div class="ltd-flyout-divider ltd-flyout-closed"></div>
+      <div class="ltd-flyout-content ltd-flyout-closed">
         <dl>
           <dt>Languages</dt>
           ${sortedLanguages}
@@ -127,18 +127,18 @@ function createFlyout() {
 
   // Clicking the label toggles content and dividers
   label.addEventListener("click", (event) => {
-    const isHidden = content.classList.toggle("closed");
-    dividers.forEach(div => div.classList.toggle("closed", isHidden));
+    const isHidden = content.classList.toggle("ltd-flyout-closed");
+    dividers.forEach(div => div.classList.toggle("ltd-flyout-closed", isHidden));
     event.stopPropagation();
   });
 
   // Clicking the icon toggles label visibility and resets all sections
   icon.addEventListener("click", (event) => {
     const labelHidden = label.classList.toggle("hidden");
-    header.classList.toggle("icon-only", labelHidden);
+    header.classList.toggle("ltd-icon-only", labelHidden);
     if (labelHidden) {
-      content.classList.add("closed");
-      dividers.forEach(div => div.classList.add("closed"));
+      content.classList.add("ltd-flyout-closed");
+      dividers.forEach(div => div.classList.add("ltd-flyout-closed"));
     }
     event.stopPropagation();
   });
@@ -146,8 +146,8 @@ function createFlyout() {
   // Clicking outside closes the content and dividers (label stays visible)
   document.addEventListener("click", (event) => {
     if (!flyout.contains(event.target)) {
-      content.classList.add("closed");
-      dividers.forEach(div => div.classList.add("closed"));
+      content.classList.add("ltd-flyout-closed");
+      dividers.forEach(div => div.classList.add("ltd-flyout-closed"));
     }
   });
 }
@@ -208,7 +208,7 @@ function addStyles() {
       cursor: pointer;
     }
 
-    .ltd-flyout-header.icon-only {
+    .ltd-flyout-header.ltd-icon-only {
       justify-content: center;
       padding: 0;
     }
@@ -241,7 +241,7 @@ function addStyles() {
       margin: 5px 10px;
     }
 
-    .ltd-flyout-divider.closed {
+    .ltd-flyout-divider.ltd-flyout-closed {
       display: none;
     }
 
@@ -253,7 +253,7 @@ function addStyles() {
       overflow-y: auto;           /* Style: Enable vertical scrollbar if needed */
     }
 
-    .ltd-flyout-content.closed {
+    .ltd-flyout-content.ltd-flyout-closed {
       display: none;
     }
 
