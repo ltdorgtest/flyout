@@ -196,7 +196,7 @@ function addStyles() {
       z-index: 5000;        /* Position: Ensure flyout appears above other elements */
       padding: 5px;         /* Style: Inner padding */
       border-radius: 5px;   /* Style: Rounded corners */
-      max-width: 350px;     /* Style: Maximum width of 350px */
+      max-width: 350px;     /* Style: Maximum width of 400px */
     }
 
     .ltd-flyout-header {
@@ -270,7 +270,7 @@ function addStyles() {
       width: 100%;
       font-weight: bold;
       text-align: left;
-      padding: 2px 0;
+      padding: 0;
     }
 
     .ltd-flyout-content dd {
