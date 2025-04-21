@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Flyout Test Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript" src="@LTD_CURRENT_JS_PATH_REL@"></script>
-  <script type="text/javascript" src="@LTD_CONFIG_JS_PATH_REL@"></script>
-  <script type="text/javascript" src="@LTD_FLYOUT_JS_PATH_REL@"></script>
+  <script type="text/javascript" src="ltd-current.js"></script>
+  <script type="text/javascript" src="../../../ltd-config.js"></script>
+  <script type="text/javascript" src="../../../ltd-flyout.js"></script>
   <style>
     body {
       font-family: sans-serif;
