@@ -10,8 +10,8 @@ In the source directory, the files should be organized as follows:
 cmake/
     custom/
         ltd-config.js       # Modified from cmake/flyout/ltd-config.js
-        layout.html         # For Sphinx-based projects to include flyout JS files
-        head.hbs            # For mdBook-based projects to include flyout JS files
+        layout.html         # For Sphinx projects to include flyout JS files
+        head.hbs            # For mdBook projects to include flyout JS files
     flyout/                 # Added as the submodule
         ltd-config.js
         ltd-current.js.in
@@ -39,7 +39,7 @@ out/
         ltd-icon.svg
 ```
 
-## Sphinx-based Projects
+## Sphinx Projects
 
 ### 1. Configure Flyout Files
 
@@ -90,7 +90,7 @@ To include the JavaScript files needed for the flyout functionality, update your
 {% endblock %}
 ```
 
-## mdBook-based Projects
+## mdBook Projects
 
 ### 1. Configure Flyout Files
 
