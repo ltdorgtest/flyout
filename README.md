@@ -124,7 +124,7 @@ out/
         ltd-icon.svg
 ```
 
-### 2. Include JavaScript Files for Flyout via Handlebars
+### 2. Include Flyout Files in Handlebars
 
 See: https://rust-lang.github.io/mdBook/format/theme/index.html
 
