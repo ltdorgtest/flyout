@@ -19,13 +19,10 @@ cmake/
         ltd-icon.svg
 ```
 
-The copied and configured files should be placed in the output build directory like this:
+The configured files should be placed in the output build directory like this:
 
 ```bash
 out/
-    repo/
-        book/                   # The book directory
-            book.toml
     html/                       # The root of the renderer directory
         zh-cn/                  # The language subdir of the renderer directory
             master/             # The renderer directory
