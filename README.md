@@ -9,7 +9,7 @@ In the source directory, the files should be organized as follows:
 ```bash
 cmake/
     custom/
-        ltd-config.js       # Modified from ltd-config.js
+        ltd-config.js       # Modified from cmake/flyout/ltd-config.js
         layout.html         # For Sphinx-based projects to include flyout JS files
         head.hbs            # For mdBook-based projects to include flyout JS files
     flyout/                 # Added as the submodule
