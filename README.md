@@ -1,8 +1,18 @@
 # Flyout Navigation Menu
 
-## Table of Contents
+<h2 id="table-of-contents">
+Table of Contents
+</h2>
 
-## How it works
+<ul>
+  <li><a href="#how-it-works">How it works</a></li>
+  <li><a href="#sphinx-projects">Sphinx Projects</a></li>
+  <li><a href="#mdbook-projects">mdBook Projects</a></li>
+</ul>
+
+<h2 id="how-it-works"><a href="#table-of-contents">
+How it works
+</a></h2>
 
 In the source directory, the files should be organized as follows:
 
@@ -39,7 +49,9 @@ out/
         ltd-icon.svg
 ```
 
-## Sphinx Projects
+<h2 id="sphinx-projects"><a href="#table-of-contents">
+Sphinx Projects
+</a></h2>
 
 ### 1. Configure Flyout Files
 
@@ -90,7 +102,9 @@ To include the JavaScript files needed for the flyout functionality, update your
 {% endblock %}
 ```
 
-## mdBook Projects
+<h2 id="mdbook-projects"><a href="#table-of-contents">
+mdBook Projects
+</a></h2>
 
 ### 1. Configure Flyout Files
 
