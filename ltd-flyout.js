@@ -91,7 +91,7 @@ function createFlyout() {
           <img class="ltd-flyout-header-icon-img" src="${_FLYOUT_JS_DIR}/ltd-icon.svg" alt="icon">
         </span>
         <span class="ltd-flyout-header-label">
-          Language: ${_CURRENT_LANGUAGE} | Version: ${_CURRENT_VERSION}
+          Lang: ${_CURRENT_LANGUAGE} / Ver: ${_CURRENT_VERSION}
         </span>
       </span>
       <div class="ltd-flyout-divider ltd-flyout-closed"></div>
