@@ -70,12 +70,16 @@ async function getTargetUrl(type, selectedValue) {
  * manages the visibility state of the flyout using event listeners.
  */
 function createFlyout() {
-  const languageOptions = _CONFIG_LANGUAGES.filter(lang => lang[0] !== "newline").map(([code, name]) => {
-    return `<option value="${code}" ${code === _CURRENT_LANGUAGE ? "selected" : ""}><code>${code}</code> : ${name}</option>`;
+  const sortedLanguages = _CONFIG_LANGUAGES.map(([code, name]) => {
+    return code === "newline"
+      ? `<dd class="newline"></dd>`
+      : `<dd class="options"><a href="#" title="${name}" class="${code === _CURRENT_LANGUAGE ? "selected" : ""}" data-language="${code}">${code}</a></dd>`;
   }).join("");
 
-  const versionOptions = _CONFIG_VERSIONS.filter(version => version[0] !== "newline").map(([code, name]) => {
-    return `<option value="${code}" ${code === _CURRENT_VERSION ? "selected" : ""}><code>${code}</code></option>`;
+  const sortedVersions = _CONFIG_VERSIONS.map(([code, name]) => {
+    return code === "newline"
+      ? `<dd class="newline"></dd>`
+      : `<dd class="options"><a href="#" title="${name}" class="${code === _CURRENT_VERSION ? "selected" : ""}" data-version="${code}">${code}</a></dd>`;
   }).join("");
 
   const sortedProjects = _CONFIG_PROJECTS.map(([project, link]) => {
@@ -98,19 +102,11 @@ function createFlyout() {
       <div class="ltd-flyout-content ltd-flyout-closed">
         <dl>
           <dt>Languages</dt>
-          <dd class="options">
-            <select id="language-select">
-              ${languageOptions}
-            </select>
-          </dd>
+          ${sortedLanguages}
         </dl>
         <dl>
           <dt>Versions</dt>
-          <dd class="options">
-            <select id="version-select">
-              ${versionOptions}
-            </select>
-          </dd>
+          ${sortedVersions}
         </dl>
         <dl>
           <dt>Project Links</dt>
@@ -128,20 +124,6 @@ function createFlyout() {
   const label = document.querySelector(".ltd-flyout-header-label");
   const dividers = document.querySelectorAll(".ltd-flyout-divider");
   const content = document.querySelector(".ltd-flyout-content");
-  const languageSelect = document.getElementById("language-select");
-  const versionSelect = document.getElementById("version-select");
-
-  // Listen for the change event on the language dropdown
-  languageSelect.addEventListener("change", async (event) => {
-    const selectedLanguage = event.target.value;
-    window.location.href = await getTargetUrl("language", selectedLanguage);
-  });
-
-  // Listen for the change event on the version dropdown
-  versionSelect.addEventListener("change", async (event) => {
-    const selectedVersion = event.target.value;
-    window.location.href = await getTargetUrl("version", selectedVersion);
-  });
 
   // Clicking the label toggles content and dividers
   label.addEventListener("click", (event) => {
@@ -177,7 +159,20 @@ function createFlyout() {
  * generates the appropriate URLs using `getTargetUrl`, and updates their `href` attributes.
  */
 async function updateLinks() {
-  // No need to update language links anymore
+  const languageLinks = document.querySelectorAll("a[data-language]");
+  const versionLinks = document.querySelectorAll("a[data-version]");
+
+  /* Update language selection links with the correct URLs. */
+  for (const link of languageLinks) {
+    const code = link.getAttribute("data-language");
+    link.href = await getTargetUrl("language", code);
+  }
+
+  /* Update version selection links with the correct URLs. */
+  for (const link of versionLinks) {
+    const code = link.getAttribute("data-version");
+    link.href = await getTargetUrl("version", code);
+  }
 }
 
 /**
@@ -189,24 +184,24 @@ async function updateLinks() {
 function addStyles() {
   const css = `
     .ltd-flyout {
-      color: #ffffff;
-      background-color: #263238;
+      color: #ffffff;             /* Color: Text color */
+      background-color: #263238;  /* Color: Background color */
       box-shadow: 0 4px 10px #000000;
       font-family: Arial, sans-serif;
       font-size: 15px;
       line-height: 20px;
-      position: fixed;
-      right: 15px;
-      bottom: 30px;
-      z-index: 5000;
-      padding: 5px;
-      border-radius: 5px;
-      max-width: 350px;
+      position: fixed;      /* Position: Stays in place on the screen */
+      right: 15px;          /* Position: 15px from the right edge */
+      bottom: 30px;         /* Position: 30px from the bottom edge */
+      z-index: 5000;        /* Position: Ensure flyout appears above other elements */
+      padding: 5px;         /* Style: Inner padding */
+      border-radius: 5px;   /* Style: Rounded corners */
+      max-width: 350px;     /* Style: Maximum width of 400px */
     }
 
     .ltd-flyout-header {
-      color: #27ae60;
-      background-color: #263238;
+      color: #27ae60;             /* Color: Text color */
+      background-color: #263238;  /* Color: Background color */
       display: flex;
       padding: 5px;
       align-items: center;
@@ -252,11 +247,11 @@ function addStyles() {
     }
 
     .ltd-flyout-content {
-      color: #ffffff;
-      background-color: #263238;
-      padding: 10px;
-      max-height: 450px;
-      overflow-y: auto;
+      color: #ffffff;             /* Color: Text color */
+      background-color: #263238;  /* Color: Background color */
+      padding: 10px;              /* Style: Inner spacing */
+      max-height: 450px;          /* Style: Max height before scrolling */
+      overflow-y: auto;           /* Style: Enable vertical scrollbar if needed */
     }
 
     .ltd-flyout-content.ltd-flyout-closed {
@@ -276,7 +271,6 @@ function addStyles() {
       font-weight: bold;
       text-align: left;
       padding: 0;
-      margin-bottom: 5px;
     }
 
     .ltd-flyout-content dd {
@@ -290,64 +284,30 @@ function addStyles() {
     }
 
     .ltd-flyout-content dd.options {
-      display: block;
-      margin-bottom: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: flex-start;
     }
 
     .ltd-flyout-content dd.options a {
-      color: #ffffff;
-      background-color: #263238;
+      color: #ffffff;             /* Color: Text color */
+      background-color: #263238;  /* Color: Background color */
       text-decoration: none;
       padding: 5px;
       border-radius: 5px;
       transition: background 0.3s;
-      display: inline-block;
-      margin-right: 5px;
     }
 
     .ltd-flyout-content dd.options a:hover {
-      color: #ffffff;
-      background-color: #27ae60;
+      color: #ffffff;             /* Color: Text color */
+      background-color: #27ae60;  /* Color: Background color */
     }
 
     .ltd-flyout-content dd.options a.selected {
-      color: #ffffff;
-      background-color: #27ae60;
+      color: #ffffff;             /* Color: Text color */
+      background-color: #27ae60;  /* Color: Background color */
       font-weight: bold;
-    }
-
-    .ltd-flyout-content dd.options select {
-      appearance: none; /* Remove default browser styling */
-      color: #ffffff;
-      background-color: #263238;
-      border: 1px solid #808080;
-      padding: 5px 30px 5px 10px; /* Add right padding for arrow */
-      border-radius: 5px;
-      font-size: inherit;
-      line-height: inherit;
-      width: 100%;
-      box-sizing: border-box;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Custom arrow */
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      cursor: pointer;
-    }
-
-    .ltd-flyout-content dd.options select:focus {
-      outline: none;
-      border-color: #27ae60;
-      box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
-    }
-
-    .ltd-flyout-content dd.options select option {
-      background-color: #263238;
-      color: #ffffff;
-    }
-
-    .ltd-flyout-content dd.options select option code {
-      font-family: monospace;   /* Use monospace font */
-      font-size: 0.9em;         /* Slightly reduce font size */
-      color: #ddd;              /* Adjust code color */
     }
   `;
 
