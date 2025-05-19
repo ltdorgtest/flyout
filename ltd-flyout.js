@@ -71,11 +71,11 @@ async function getTargetUrl(type, selectedValue) {
  */
 function createFlyout() {
   const languageOptions = _CONFIG_LANGUAGES.filter(lang => lang[0] !== "newline").map(([code, name]) => {
-    return `<option value="${code}" ${code === _CURRENT_LANGUAGE ? "selected" : ""}><code>${code}</code> : ${name}</option>`;
+    return `<option value="${code}" ${code === _CURRENT_LANGUAGE ? "selected" : ""}>${code} : ${name}</option>`;
   }).join("");
 
   const versionOptions = _CONFIG_VERSIONS.filter(version => version[0] !== "newline").map(([code, name]) => {
-    return `<option value="${code}" ${code === _CURRENT_VERSION ? "selected" : ""}><code>${code}</code></option>`;
+    return `<option value="${code}" ${code === _CURRENT_VERSION ? "selected" : ""}>${code} : ${name}</option>`;
   }).join("");
 
   const sortedProjects = _CONFIG_PROJECTS.map(([project, link]) => {
