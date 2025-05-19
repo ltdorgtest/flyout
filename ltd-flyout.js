@@ -276,7 +276,6 @@ function addStyles() {
       font-weight: bold;
       text-align: left;
       padding: 0;
-      margin-bottom: 5px;
     }
 
     .ltd-flyout-content dd {
@@ -291,6 +290,7 @@ function addStyles() {
 
     .ltd-flyout-content dd.options {
       display: block;
+      margin-top: 5px;
       margin-bottom: 5px;
     }
 
