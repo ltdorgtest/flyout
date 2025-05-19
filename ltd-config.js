@@ -15,7 +15,6 @@ var CONFIG_OPTIONS = {
     ["master",    "master"],
     ["latest",    "latest"],
     ["stable",    "stable"],
-    ["newline",   "newline"],       /* Newline */
     ["4.19",      "4.19"],
     ["4.18",      "4.18"],
     ["4.17",      "4.17"],
@@ -36,7 +35,6 @@ var CONFIG_OPTIONS = {
     ["4.2",       "4.2"],
     ["4.1",       "4.1"],
     ["4.0",       "4.0"],
-    ["newline",   "newline"],       /* Newline */
     ["rolling",   "Rolling (dev)"],
     ["jazzy",     "Jazzy (latest)"],
     ["iron",      "Iron (EOL)"],
@@ -46,7 +44,6 @@ var CONFIG_OPTIONS = {
     ["eloquent",  "Eloquent (EOL)"],
     ["dashing",   "Dashing (EOL)"],
     ["crystal",   "Crystal (EOL)"],
-    ["newline",   "newline"],       /* Newline */
     ["3.29",      "3.29"],
     ["3.28",      "3.28"],
     ["3.27",      "3.27"],
