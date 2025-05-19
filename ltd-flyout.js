@@ -302,7 +302,6 @@ function addStyles() {
       border-radius: 5px;
       transition: background 0.3s;
       display: inline-block;
-      margin-right: 5px;
     }
 
     .ltd-flyout-content dd.options a:hover {
@@ -329,7 +328,7 @@ function addStyles() {
       box-sizing: border-box;
       background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Custom arrow */
       background-repeat: no-repeat;
-      background-position: right 10px center;
+      background-position: right 5px center;
       cursor: pointer;
     }
 
@@ -346,7 +345,6 @@ function addStyles() {
 
     .ltd-flyout-content dd.options select option code {
       font-family: monospace;   /* Use monospace font */
-      font-size: 0.9em;         /* Slightly reduce font size */
       color: #ddd;              /* Adjust code color */
     }
   `;
