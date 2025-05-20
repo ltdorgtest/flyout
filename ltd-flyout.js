@@ -294,34 +294,6 @@ function addStyles() {
       margin-bottom: 5px;
     }
 
-    .ltd-flyout-content dd.options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      justify-content: flex-start;
-    }
-
-    .ltd-flyout-content dd.options a {
-      color: #ffffff;
-      background-color: #263238;
-      text-decoration: none;
-      padding: 5px;
-      border-radius: 5px;
-      transition: background 0.3s;
-      display: inline-block;
-    }
-
-    .ltd-flyout-content dd.options a:hover {
-      color: #ffffff;
-      background-color: #27ae60;
-    }
-
-    .ltd-flyout-content dd.options a.selected {
-      color: #ffffff;
-      background-color: #27ae60;
-      font-weight: bold;
-    }
-
     .ltd-flyout-content dd.select select {
       appearance: none; /* Remove default browser styling */
       color: #ffffff;
@@ -353,6 +325,34 @@ function addStyles() {
     .ltd-flyout-content dd.select select option code {
       font-family: monospace;   /* Use monospace font */
       color: #ddd;              /* Adjust code color */
+    }
+
+    .ltd-flyout-content dd.options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: flex-start;
+    }
+
+    .ltd-flyout-content dd.options a {
+      color: #ffffff;
+      background-color: #263238;
+      text-decoration: none;
+      padding: 5px;
+      border-radius: 5px;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .ltd-flyout-content dd.options a:hover {
+      color: #ffffff;
+      background-color: #27ae60;
+    }
+
+    .ltd-flyout-content dd.options a.selected {
+      color: #ffffff;
+      background-color: #27ae60;
+      font-weight: bold;
     }
   `;
 
