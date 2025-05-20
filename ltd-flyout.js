@@ -91,14 +91,14 @@ function createFlyout() {
           <img class="ltd-flyout-header-icon-img" src="${_FLYOUT_JS_DIR}/ltd-icon.svg" alt="icon">
         </span>
         <span class="ltd-flyout-header-label">
-          Lang: ${_CURRENT_LANGUAGE} / Ver: ${_CURRENT_VERSION}
+          l: ${_CURRENT_LANGUAGE} / v: ${_CURRENT_VERSION}
         </span>
       </span>
       <div class="ltd-flyout-divider ltd-flyout-closed"></div>
       <div class="ltd-flyout-content ltd-flyout-closed">
         <dl>
           <dt>Languages</dt>
-          <dd class="options">
+          <dd class="select">
             <select id="language-select">
               ${languageOptions}
             </select>
@@ -106,7 +106,7 @@ function createFlyout() {
         </dl>
         <dl>
           <dt>Versions</dt>
-          <dd class="options">
+          <dd class="select">
             <select id="version-select">
               ${versionOptions}
             </select>
@@ -201,7 +201,7 @@ function addStyles() {
       z-index: 5000;
       padding: 5px;
       border-radius: 5px;
-      max-width: 320px;
+      max-width: 300px;
     }
 
     .ltd-flyout-header {
@@ -288,10 +288,17 @@ function addStyles() {
       height: 0;
     }
 
-    .ltd-flyout-content dd.options {
+    .ltd-flyout-content dd.select {
       display: block;
       margin-top: 5px;
       margin-bottom: 5px;
+    }
+
+    .ltd-flyout-content dd.options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: flex-start;
     }
 
     .ltd-flyout-content dd.options a {
@@ -315,7 +322,7 @@ function addStyles() {
       font-weight: bold;
     }
 
-    .ltd-flyout-content dd.options select {
+    .ltd-flyout-content dd.select select {
       appearance: none; /* Remove default browser styling */
       color: #ffffff;
       background-color: #263238;
@@ -332,18 +339,18 @@ function addStyles() {
       cursor: pointer;
     }
 
-    .ltd-flyout-content dd.options select:focus {
+    .ltd-flyout-content dd.select select:focus {
       outline: none;
       border-color: #27ae60;
       box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
     }
 
-    .ltd-flyout-content dd.options select option {
+    .ltd-flyout-content dd.select select option {
       background-color: #263238;
       color: #ffffff;
     }
 
-    .ltd-flyout-content dd.options select option code {
+    .ltd-flyout-content dd.select select option code {
       font-family: monospace;   /* Use monospace font */
       color: #ddd;              /* Adjust code color */
     }
