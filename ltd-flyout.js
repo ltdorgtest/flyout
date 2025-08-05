@@ -196,8 +196,8 @@ function addStyles() {
       font-size: 15px;
       line-height: 20px;
       position: fixed;
-      right: 20px;
-      bottom: 50px;
+      right: 15px;
+      bottom: 30px;
       z-index: 5000;
       padding: 5px;
       border-radius: 5px;
